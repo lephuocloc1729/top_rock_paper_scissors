@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock Paper Scissor
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+    rel="stylesheet"
+    href="./rock-paper-scissors.css" >
+  </head>
+  <body>
+    <main class="main">
+      <p class="title"> Rock Paper Scissor</p>
+      <section class="playground">
+        <button class="move-button rock-button">
+          <img src="images/rock-emoji.png" class="move-image">
+        </button>
+        <button class="move-button paper-button">
+          <img src="images/paper-emoji.png" class="move-image">
+        </button>
+        <button class="move-button scissors-button">
+            <img src="images/scissors-emoji.png" class="move-image">
+        </button>
+      </section>
+      <p class="js-result">
+      </p>
+      <p class="js-move">
+      </p>
+      <p class="js-score">
+      </p>
+      <section class="button">
+        <button onclick="
+          score.win = 0;
+          score.tie = 0;
+          score.lose = 0;
+          localStorage.removeItem('score');
+          announce_score();
+          reset();
+        " class="reset-button">
+          Reset score
+        </button >
+        
+        <button onclick="
+          autoPlay();
+          " class="auto-button">
+          Auto play
+        </button>
+      </section>
+      <p class="copyright">Copyright 2023 &#169 lephuocloc</p>
+    </main>
+    <script src="./rock-paper-scissors.js"> </script>
+
+  </body>
+</html>
